@@ -3,7 +3,7 @@
 #  by AlonsoAliaga
 ####################
 
-#Version: 0.1-BETA
+#Configuration updated to version 0.1-BETA
 
 #REMINDER: Don't forget to use the material names that EXISTS in your server version.
 #Same with SOUNDS. Use the ones that exists in your server version.
@@ -11,7 +11,8 @@ Items:
   Teleport-scroll:
     Options:
       #Permission to use this. If "none" or null, no permission will be required.
-      Permission: "betterteleport.teleportscroll"
+      #Permission: "betterteleport.teleportscroll"
+      Permission: "none"
       Material: "PAPER"
       #Seconds until teleportation. Min: 1 , max: 60
       Time: 5
@@ -61,7 +62,8 @@ Items:
         - "&eRight click to teleport."
   Instant-teleport-scroll:
     #Permission to use this. If "none" or null, no permission will be required.
-    Permission: "betterteleport.instantteleportscroll"
+    #Permission: "betterteleport.instantteleportscroll"
+    Permission: "none"
     Material: "PAPER"
     #Seconds until teleportation. Min: 1 , max: 60
     Uses: 3
@@ -111,8 +113,10 @@ Items:
         - "&eRight click to teleport."
 
 Permissions:
-    Main-permission: "betterteleport.main"
-    Recipe-permission: "betterteleport.recipe"
+    #Main-permission: "betterteleport.main"
+    Main-permission: "none"
+    #Recipe-permission: "betterteleport.recipe"
+    Recipe-permission: "none"
     Admin-permission: "betterteleport.admin"
 
 Messages:
@@ -134,7 +138,7 @@ Messages:
       Cannot-stacked: "&cYou cannot add uses to stacked scrolls."
       Max-reached: "&cYou reached max amount of uses allowed for this scroll!"
       Corrupted-location: "&cLooks like the location is corrupted or the scroll world is not loaded. Try again later!"
-      Added: "&aYou successfully added {ADDEDUSES} to this scroll! Actual uses: {FINALUSES}"
+      Added: "&aYou successfully added {ADDEDUSES} uses to this scroll! Actual uses: {FINALUSES}"
   Instant-teleport-scroll:
     No-permission: "&cYou don't have permission to use this item."
     Not-selected: "&cLocation hasn't been selected. Shift + right click to select the location."
@@ -150,7 +154,7 @@ Messages:
       Cannot-stacked: "&cYou cannot add uses to stacked scrolls."
       Max-reached: "&cYou reached max amount of uses allowed for this scroll!"
       Corrupted-location: "&cLooks like the location is corrupted or the scroll world is not loaded. Try again later!"
-      Added: "&aYou successfully added {ADDEDUSES} to this scroll! Actual uses: {FINALUSES}"
+      Added: "&aYou successfully added {ADDEDUSES} uses to this scroll! Actual uses: {FINALUSES}"
   Reload:
     Reloaded: "&aYou have successfully reloaded the configuration. Messages and some checks have been reloaded!"
   Recipe:
