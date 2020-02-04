@@ -7,6 +7,8 @@ Most servers allow donors to save a lot of homes, however this help your players
  \
 This can be used for **RPG** servers too.
 
+Access the **[wiki](https://github.com/AlonsoAliaga/BetterTeleport/wiki)** for more information.
+
 ## Resources
 - [Spigot resource](https://www.spigotmc.org/resources/X/)
 - [Issue tracker](https://github.com/AlonsoAliaga/BetterTeleport/issues)
