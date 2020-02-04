@@ -1,0 +1,213 @@
+####################
+#   BetterTeleport
+#  by AlonsoAliaga
+####################
+
+#Version: 0.1-BETA
+
+#REMINDER: Don't forget to use the material names that EXISTS in your server version.
+#Same with SOUNDS. Use the ones that exists in your server version.
+Items:
+  Teleport-scroll:
+    Options:
+      #Permission to use this. If "none" or null, no permission will be required.
+      Permission: "betterteleport.teleportscroll"
+      Material: "PAPER"
+      #Seconds until teleportation. Min: 1 , max: 60
+      Time: 5
+      Uses: 3
+      Add-uses:
+        Enabled: true
+        Material: "ENDER_PEARL"
+        Added-uses: 1
+        Max-uses: 10
+        Success-sound: "ENTITY_PLAYER_LEVELUP"
+        Fail-sound: "BLOCK_ANVIL_LAND"
+      Sounds:
+        Save: "BLOCK_ANVIL_USE"
+        Break: "ENTITY_ITEM_BREAK"
+        Used: "ENTITY_PLAYER_LEVELUP"
+        Count: "UI_BUTTON_CLICK"
+        Teleport: "ENTITY_ENDERMAN_TELEPORT"
+    Crafting:
+      Recipe:
+        - "EEE"
+        - "EPE"
+        - "EEE"
+      Ingredients:
+        #Add your own letters and materials
+        P: "PAPER"
+        E: "ENDER_PEARL"
+    New:
+      Displayname: "&5&lTeleport Scroll"
+      Lore:
+        - "&7This scroll allows you to teleport"
+        - "&7to a previously saved location after"
+        - "&7{TIME} seconds."
+        - ""
+        - "&7Uses: &d{USES}"
+        - ""
+        - "&eShift-right click to save location."
+    Used:
+      Displayname: "&5&lTeleport Scroll"
+      Lore:
+        - "&7This scroll allows you to teleport"
+        - "&7to a previously saved location after"
+        - "&7{TIME} seconds."
+        - ""
+        - "&7Location: &d{WORLD}&7:&d{X}:&d{Y}&7:&d{Z}"
+        - "&7Remaining uses: &d{USES}"
+        - ""
+        - "&eRight click to teleport."
+  Instant-teleport-scroll:
+    #Permission to use this. If "none" or null, no permission will be required.
+    Permission: "betterteleport.instantteleportscroll"
+    Material: "PAPER"
+    #Seconds until teleportation. Min: 1 , max: 60
+    Uses: 3
+    Options:
+      Add-uses:
+        Enabled: true
+        Material: "ENDER_PEARL"
+        Max-uses: 10
+        Success-sound: "ENTITY_PLAYER_LEVELUP"
+        Fail-sound: "BLOCK_ANVIL_LAND"
+      Sounds:
+        Save: "BLOCK_ANVIL_USE"
+        Break: "ENTITY_ITEM_BREAK"
+        Used: "ENTITY_PLAYER_LEVELUP"
+        Teleport: "ENTITY_ENDERMAN_TELEPORT"
+    Crafting:
+      Amount: 1
+      Recipe:
+        - "EDE"
+        - "DPD"
+        - "EDE"
+      Ingredients:
+        #Add your own letters and materials
+        P: "PAPER"
+        D: "DIAMOND"
+        E: "ENDER_PEARL"
+    New:
+      Displayname: "&6&lInstant teleport Scroll"
+      Lore:
+        - "&7This scroll allows you to teleport"
+        - "&7to a previously saved location"
+        - "&7instantly to save your life."
+        - ""
+        - "&7Uses: &d{USES}"
+        - ""
+        - "&eShift-right click to save location."
+    Used:
+      Displayname: "&6&lInstant teleport Scroll"
+      Lore:
+        - "&7This scroll allows you to teleport"
+        - "&7to a previously saved location"
+        - "&7instantly to save your life."
+        - ""
+        - "&7Location: &d{WORLD}&7:&d{X}:&d{Y}&7:&d{Z}"
+        - "&7Remaining uses: &d{USES}"
+        - ""
+        - "&eRight click to teleport."
+
+Permissions:
+    Main-permission: "betterteleport.main"
+    Recipe-permission: "betterteleport.recipe"
+    Admin-permission: "betterteleport.admin"
+
+Messages:
+  No-permission: "&cYou don't have permission to perform this command."
+  Teleport-scroll:
+    No-permission: "&cYou don't have permission to use this item."
+    Not-selected: "&cLocation hasn't been selected. Shift + right click to select the location."
+    Cannot-use-stacked: "&cYou cannot use stacked scrolls!"
+    Corrupted-or-not-loaded: "&cLooks like this scroll is corrupted or the target world is not loaded. Try again later!"
+    Error-saving: "&cLooks like there was an error writing the location in the scroll. Try again later or contact an administrator!"
+    Location-selected: "&6You have selected the location correctly! You can now rename the item in an anvil."
+    Location-selected-full: "&6You have selected the location correctly! Due to insufficient space the item was thrown in the flood. You can now rename the item in an anvil."
+    Teleportation:
+      Action-bar: true
+      Message: "&eTeleporting in &b{TIME} &eseconds!"
+      Cancelled: "&cYou moved! Teleportation was cancelled."
+      Teleported: "&aYou have been teleported!"
+    Add-uses:
+      Cannot-stacked: "&cYou cannot add uses to stacked scrolls."
+      Max-reached: "&cYou reached max amount of uses allowed for this scroll!"
+      Corrupted-location: "&cLooks like the location is corrupted or the scroll world is not loaded. Try again later!"
+      Added: "&aYou successfully added {ADDEDUSES} to this scroll! Actual uses: {FINALUSES}"
+  Instant-teleport-scroll:
+    No-permission: "&cYou don't have permission to use this item."
+    Not-selected: "&cLocation hasn't been selected. Shift + right click to select the location."
+    Cannot-use-stacked: "&cYou cannot use stacked scrolls!"
+    Corrupted-or-not-loaded: "&cLooks like this scroll is corrupted or the target world is not loaded. Try again later!"
+    Error-saving: "&cLooks like there was an error writing the location in the scroll. Try again later or contact an administrator!"
+    Location-selected: "&6You have selected the location correctly! You can now rename the item in an anvil."
+    Location-selected-full: "&6You have selected the location correctly! Due to insufficient space the item was thrown in the flood. You can now rename the item in an anvil."
+    Teleportation:
+      Action-bar: true
+      Teleported: "&aYou have been teleported!"
+    Add-uses:
+      Cannot-stacked: "&cYou cannot add uses to stacked scrolls."
+      Max-reached: "&cYou reached max amount of uses allowed for this scroll!"
+      Corrupted-location: "&cLooks like the location is corrupted or the scroll world is not loaded. Try again later!"
+      Added: "&aYou successfully added {ADDEDUSES} to this scroll! Actual uses: {FINALUSES}"
+  Reload:
+    Reloaded: "&aYou have successfully reloaded the configuration. Messages and some checks have been reloaded!"
+  Recipe:
+    Cannot-console: "&cConsole cannot perform this command."
+    Titles:
+      Teleport-scroll: "&8Teleport scroll recipe"
+      Instant-teleport-scroll: "&8Instant teleport scroll recipe"
+    Usage:
+      - "&cUsage: /betterteleport recipe <teleportscroll/instantteleportscroll>"
+  Give:
+    Invalid-target: "&cPlayer couldn't be found!"
+    Invalid-number: "&cNumber is not valid!"
+    Given-staff: "&aYou successfully gave {TARGET} {AMOUNT} {ITEM}&a."
+    Given: "&6You received {AMOUNT} {ITEM}&6."
+    Given-extra: "&6You received {AMOUNT} {ITEM}&6. Due to insufficient space some items were thrown in the floor."
+    Usage:
+      - "&cUsage: /betterteleport give <teleportscroll/instantteleportscroll>"
+    Teleport-scroll:
+      Usage:
+        - "&cUsage:"
+        - "&c/betterteleport give teleportscroll <player> [used]"
+        - "&c/betterteleport give teleportscroll <player> <amount> [used]"
+        - "&c/betterteleport give teleportscroll <player> <uses> <amount> [used]"
+    Instant-teleport-scroll:
+      Usage:
+        - "&cUsage:"
+        - "&c/betterteleport give instantteleportscroll <player> [used]"
+        - "&c/betterteleport give instantteleportscroll <player> <amount> [used]"
+        - "&c/betterteleport give instantteleportscroll <player> <uses> <amount> [used]"
+  Help:
+    User:
+      - "&e&lUser commands"
+      - " &5/betterteleport help &f- &dShow this message."
+    Recipe:
+      - "&e&lUser commands"
+      - " &5/betterteleport help &f- &dShow this message."
+      - " &5/betterteleport recipe &f- &dCheck plugin items recipes."
+    Admin:
+      - "&c&lAdmin commands"
+      - " &5/betterteleport help &f- &dShow this message."
+      - " &5/betterteleport reload &f- &dReload configuration."
+      - " &5/betterteleport recipe &f- &dCheck plugin items recipes."
+      - " &5/betterteleport give &f- &dGive plugin items."
+Time:
+  Format: "dd/mm/yyyy hh:mm:ss"
+  Days: "d"
+  Hours: "h"
+  Minutes: "m"
+  Seconds: "s"
+
+Updates:
+  #Check updates? Recommended to leave this enabled!
+  Check-updates: true
+  #Notify updates when a player joins the server having the permission.
+  Notify-updates: true
+  #Permission the player must have to be notified of new updates when joining the server.
+  #If none or null, only Operators will be notified.
+  Permission: "betterteleport.updatenotify"
+  #Message sent when update is found.
+  Message: "&5[BetterTeleport] &eA new update has been found! Download it here &c{LINK}"
