@@ -133,6 +133,7 @@ Messages:
       Action-bar: true
       Message: "&eTeleporting in &b{TIME} &eseconds!"
       Cancelled: "&cYou moved! Teleportation was cancelled."
+      Cancelled-damage: "&cYou received damage! Teleportation was cancelled."
       Teleported: "&aYou have been teleported!"
     Add-uses:
       Cannot-stacked: "&cYou cannot add uses to stacked scrolls."
