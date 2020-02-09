@@ -135,6 +135,7 @@ Messages:
       Action-bar: true
       Message: "&eTeletransportando en &b{TIME} &esegundos!"
       Cancelled: "&cTe moviste! Teletransportación cancelada."
+      Cancelled-damage: "&cRecibiste daño! Teletransportación cancelada."
       Teleported: "&aHas sido teletransportado!"
     Add-uses:
       Cannot-stacked: "&cNo puedes agregar usos a pergaminos stackeados."
